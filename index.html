@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Luke Waddington">
+	
+    <title>Luke Waddington Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"> <!--replace-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/portfolio.css" rel="stylesheet">
+
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+	<script src="js/portfolio.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$("#menu-close").click();>Navigation</a>
+            </li>
+            <li>
+                <a href="#topNav" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="#services" onclick=$("#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+	<script type="text/javascript" src="js/headerScript.js"> </script>
+	
+    <div id="top" class="pageHeader">
+        <div class="headerText">
+            
+            <h1><b>Luke Waddington</b></h1>
+            <h2>Full Stack Software Developer</h2>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 class="text-center">TL;DR</h1> 
+                    <p>
+                        I do programming projects very often, paired with a quirky write-up for each of them. It's a mixed bag of server-side, interfaces, and a tad bit of hardware. I do these purely out of fun so my reasoning mightn't make any sense to the average person.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Development Experience</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-desktop fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Desktop</strong>
+                                </h4>
+                                <p>C# Desktop Application Development</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-external-link fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Web</strong>
+                                </h4>
+                                <p>From static sites to full scale Web Applications with ASP.NET MVC</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-mobile fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Mobile</strong>
+                                </h4>
+                                <p>Practical and elegant mobile Apps, with or without a backend</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-database fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Database</strong>
+                                </h4>
+                                <p>Database/Mock Database Systems Creation, Management &amp; Interfacing</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>My Work/ Articles</h2>
+                    <hr class="small">
+                    <div class="row" style="padding: 0px 20px 0px 20px;">
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="pages/lasersystem.html">
+                                    <img class="img-portfolio img-responsive" src="img/laserThumb.PNG">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="pages/Doorman.html">
+                                    <img class="img-portfolio img-responsive" src="img/doormanThumb.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="pages/IssuesAspAPI.html">
+                                    <img class="img-portfolio img-responsive" src="img/apiThumb.png">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <script type="text/javascript" src="js/footerScript.js"> </script>
+
+</body>
+</html>
