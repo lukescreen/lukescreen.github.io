@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luke's Quotes</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Luke's Preposterous High Jinks</h1>
+		</header>
+		<div class="cover"></div>
+		<section class="content" style="margin-top: 15px;">
+			<button id="dark-mode-button" class="button" onclick="darkMode()" onmouseup="myButtonUp('dark-mode-button')">
+            <span>Light/Dark</span>
+		</section>
+		<section class="content">
+			<h2>Quotes</h2>
+			<div class="text-container">
+				<p>"Imperfection is what makes experimentation possible!</p>
+				<p>Imperfection is beautiful... at least to me."</p>
+			</div>
+			
+			<div class="text-container">
+				<p>"Imperfection is what makes experimentation possible!</p>
+				<p>Imperfection is beautiful... at least to me."</p>
+			</div>
+		</section>
+		<section class="content">
+			<h2>Quotes</h2>
+			<div class="text-container">
+				<p>"Imperfection is what makes experimentation possible!</p>
+				<p>Imperfection is beautiful... at least to me."</p>
+            </div>
+		</section>
+		<script>
+			function darkMode() {
+				var element = document.body;
+				element.classList.toggle("dark-mode");
+			}
+            function myButtonUp(button_id) {
+				var element = document.getElementById(button_id);
+				element.blur();
+				document.getElementsByClassName('fake-button').blur()
+                element.blur();
+			}
+		</script>
+	</body>
+</html>
