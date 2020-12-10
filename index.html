@@ -13,37 +13,39 @@
 		<div class="cover"></div>
 		<section class="content" style="margin-top: 15px;">
 			<button id="dark-mode-button" class="button" onclick="darkMode()" onmouseup="myButtonUp('dark-mode-button')">
-            <span>Light/Dark</span>
+            		<span>Light/Dark</span>
 		</section>
 		<section class="content">
 			<h2>Quotes</h2>
 			<div class="text-container">
-				<p>If you can't solve a problem, then there</p>
+				<p>"If you can't solve a problem, then there</p>
 				<p>is an easier problem you can solve: find it."</p>
 			</div>
-			
 			<div class="text-container">
 				<p>"Imperfection is what makes experimentation possible!</p>
 				<p>Imperfection is beautiful... at least to me."</p>
 			</div>
-		</section>
-		<section class="content">
-			<h2>Quotes</h2>
 			<div class="text-container">
-				<p>"Imperfection is what makes experimentation possible!</p>
-				<p>Imperfection is beautiful... at least to me."</p>
-            </div>
-		</section>
+				<p>“Mathematics is the cheapest science, it does not</p>
+				<p>require any expensive equipment.</p>
+				<p>All one needs for mathematics is a pencil and paper.”</p>
+			</div>
+			<div class="text-container">
+				<p>“The first rule of discovery is to have brains and</p>
+				<p>good luck. The second rule of discovery is to sit tight</p>
+				<p>and wait till you get a bright idea.”</p>
+			</div>
+			</section>
 		<script>
 			function darkMode() {
 				var element = document.body;
 				element.classList.toggle("dark-mode");
 			}
-            function myButtonUp(button_id) {
+            		function myButtonUp(button_id) {
 				var element = document.getElementById(button_id);
 				element.blur();
 				document.getElementsByClassName('fake-button').blur()
-                element.blur();
+                		element.blur();
 			}
 		</script>
 	</body>
