@@ -25,10 +25,10 @@ class Spread():
 
 
 class CurrentProbability():
-    def __init__(self, graph, probability_function, rate):
+    def __init__(self, graph, probability_function, rate, y_axis):
         self.graph = graph
         self.graph.set_xlim(0, 40)
-        self.graph.set_ylim(0, 1)
+        self.graph.set_ylim(0, y_axis)
 
         # generates graph 2 using Calc.getProbability
         for i in range(0, 41):
@@ -36,7 +36,7 @@ class CurrentProbability():
             self.graph.plot(i, probability, "k.")
 
     def placeMarker(self, x, y):
-        return self.graph.plot(x, y, "bo")
+        return (self.graph.plot(x, y, "bo"), self.annotate(x, y))
 
     def removeMarker(self, marker):
         # TODO: figure out what the hell i managed to do here
@@ -44,15 +44,19 @@ class CurrentProbability():
         for handle in marker:
             handle.remove()
 
+    def annotate(self, x, y):
+        return self.graph.annotate(str(round(y, 3)), (x, y+0.05))
+
 
 class TotalProbability():
-    def __init__(self, graph):
+    def __init__(self, graph, y_axis):
         self.graph = graph
+        self.y_axis = y_axis
 
     def reset(self):
         self.graph.cla()
         self.graph.set_xlim(0, 40)
-        self.graph.set_ylim(0, 1)
+        self.graph.set_ylim(0, self.y_axis)
 
     def plot_subtotals(self, subtotals, iterations):
         self.reset()
@@ -80,6 +84,7 @@ class Calc:
 # * variables to mess with
 rate = 20
 speed = 1
+y_axis = 0.5
 
 print("this is here so you can stop the program\n\nwithout it, it would continue to run\nbecause its main process isn't terminated by closing the interface")
 
@@ -92,8 +97,8 @@ plt.get_current_fig_manager().full_screen_toggle()
 
 # creating graph objects
 s = Spread(subplots[0])
-c = CurrentProbability(subplots[1], Calc.getProbability, rate)
-t = TotalProbability(subplots[2])
+c = CurrentProbability(subplots[1], Calc.getProbability, rate, y_axis)
+t = TotalProbability(subplots[2], y_axis)
 
 
 def cycle(speed=1, total=0, iterations=1):
@@ -106,9 +111,10 @@ def cycle(speed=1, total=0, iterations=1):
 
     s.annotate(subtotal, (total + subtotal) // iterations, probability)
 
-    point = c.placeMarker(subtotal, probability)
+    point, annotation = c.placeMarker(subtotal, probability)
     plt.pause(speed)
     c.removeMarker(point)
+    annotation.remove()
 
     return subtotal
 
